@@ -17,6 +17,8 @@
 
 &mt { quick_tap_ms = <200>; };
 
+&tog { toggle-mode = "flip"; };
+
 / {
     keymap {
         compatible = "zmk,keymap";
