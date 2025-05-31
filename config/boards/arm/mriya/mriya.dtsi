@@ -29,6 +29,7 @@
 		compatible = "zmk,physical-layout";
 		display-name = "Mriya";
 		path = "boards/arm/mriya/mriya.json";
+		transform = <&default_transform>;
 	};
 
 	default_transform: keymap_transform_0 {
