@@ -4,6 +4,15 @@
  * SPDX-License-Identifier: MIT
  */
 
+/dts-v1/;
+#include "mriya.dtsi"
+
+/ {
+	chosen {
+		zmk,physical_layout = &physical_layout0;
+	};
+};
+
 &kscan0 {
 	col-gpios
 		= <&gpio0 22 GPIO_ACTIVE_HIGH>
