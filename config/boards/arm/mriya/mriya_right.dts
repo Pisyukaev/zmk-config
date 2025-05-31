@@ -20,3 +20,11 @@
 		, <&gpio1  4 GPIO_ACTIVE_HIGH>
 		;
 };
+
+/dts-v1/;
+
+/ {
+	chosen {
+		zmk,physical_layout = &mriya_right_map;
+	};
+};
