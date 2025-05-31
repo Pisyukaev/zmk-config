@@ -23,7 +23,7 @@
 		zmk,kscan = &kscan0;
 		zmk,battery = &vbatt;
 		zephyr,console = &cdc_acm_uart0;
-		zmk,physical_layout = <&mriya_position_map>;
+		zmk,physical_layout = &mriya_position_map;
 	};
 
 	default_transform: keymap_transform_0 {
