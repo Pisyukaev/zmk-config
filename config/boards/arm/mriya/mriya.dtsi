@@ -21,6 +21,7 @@
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
 		zmk,battery = &vbatt;
+		zephyr,console = &cdc_acm_uart0;
 	};
 
 	default_transform: keymap_transform_0 {
@@ -89,13 +90,21 @@
 
 &usbd {
     status = "okay";
-    zephyr_udc0: usbd {
-        compatible = "nordic,nrf-usbd";
-        label = "USBD";
-        cdc_acm_uart0: cdc_acm_uart {
-            compatible = "zephyr,cdc-acm-uart";
-            label = "CDC_ACM_0";
-        };
+};
+
+zephyr_udc0: &usbd {
+    compatible = "nordic,nrf-usbd";
+    status = "okay";
+    reg = <0x40027000 0x1000>;
+    interrupts = <39 1>;
+    num-bidir-endpoints = <1>;
+    num-in-endpoints = <7>;
+    num-out-endpoints = <7>;
+    num-isoin-endpoints = <1>;
+    num-isoout-endpoints = <1>;
+    cdc_acm_uart0: cdc_acm_uart {
+        compatible = "zephyr,cdc-acm-uart";
+        label = "CDC_ACM_0";
     };
 };
 
