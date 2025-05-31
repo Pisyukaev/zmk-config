@@ -21,10 +21,3 @@
 		;
 };
 
-/dts-v1/;
-
-/ {
-	chosen {
-		zmk,physical_layout = &mriya_right_map;
-	};
-};
