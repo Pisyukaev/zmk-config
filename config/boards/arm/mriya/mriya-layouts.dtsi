@@ -93,7 +93,7 @@
         >;
     };
 
-    mriya_position_map {
+    mriya_position_map: position_map {
         compatible = "zmk,physical-layout-position-map";
         complete;
 
