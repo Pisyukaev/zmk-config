@@ -27,6 +27,7 @@
 
 	physical_layout: physical_layout {
 		compatible = "zmk,physical-layout";
+		display-name = "Mriya";
 		path = "boards/arm/mriya/mriya.json";
 	};
 
