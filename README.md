@@ -2,13 +2,13 @@
 
 ## Сборки
 
-В `build.yaml` добавлена схема с USB-донглом на nRF52840:
+В `build.yaml` добавлена дополнительная сборка USB-донгла на nRF52840:
 
-- `mriya_left` — левая половинка как split-периферия;
-- `mriya_right` — правая половинка как split-периферия;
-- `nice_nano_v2 + zmk_dongle` — центральный донгл (USB + BLE) с поддержкой ZMK Studio;
+- `mriya_left` — основная прошивка левой половинки (как и раньше);
+- `mriya_right` — прошивка правой половинки;
+- `nice_nano_v2 + zmk_dongle` — прошивка донгла (USB + BLE) с поддержкой ZMK Studio;
 - `nice_nano_v2 + settings_reset` — сервисная прошивка для сброса bonding/settings.
 
-### Важно
+## ZMK Studio на донгле
 
-Для донгла ZMK Studio включен без блокировки (`CONFIG_ZMK_STUDIO_LOCKING` не задан), чтобы не потерять доступ к настройке при отсутствии физических клавиш на донгле.
+Отдельный файл `config/nice_nano_v2_zmk_dongle.conf` включает параметры split central + USB/BLE + Studio RPC для донгла.
