@@ -1,0 +1,9 @@
+boards:
+  - name: mriya_left
+    vendor: gaevkii
+    socs:
+      - name: nrf52840
+  - name: mriya_right
+    vendor: gaevkii
+    socs:
+      - name: nrf52840

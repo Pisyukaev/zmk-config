@@ -4,7 +4,7 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SPLIT=y
   - board: mriya_right
     cmake-args: -DCONFIG_ZMK_SPLIT=y
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0//zmk
     shield: mriya_dongle dongle_display
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0//zmk
     shield: settings_reset
