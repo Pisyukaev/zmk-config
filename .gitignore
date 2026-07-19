@@ -1,0 +1,8 @@
+build/
+build_*/
+artifacts/
+.west/
+
+zephyr/
+
+config/
