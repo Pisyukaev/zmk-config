@@ -23,6 +23,15 @@
 &tog { toggle-mode = "flip"; };
 
 / {
+    behaviors {
+        tap_dance: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kt LEFT_SHIFT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
